@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_7',['add',['../main_8cpp.html#aa99823a0fc8313c9c32541ce768fb801',1,'main.cpp']]]
+  ['addcontact_16',['AddContact',['../main_8cpp.html#a61ed020ce9c2db9cbb959a498d1730f4',1,'main.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_4',['README.md',['../README_8md.html',1,'']]]
+  ['lastletter_4',['lastLetter',['../structTrieNode.html#a627105e3739bfaa053a983747c89e37f',1,'TrieNode']]]
 ];

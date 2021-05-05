@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>aardvark: doxygen-cmake-github</title>
+<title>Phone_Book: Program Explained</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">aardvark
+   <div id="projectname">Phone_Book
    &#160;<span id="projectnumber">0.4.0</span>
    </div>
   </td>
@@ -63,11 +63,34 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">doxygen-cmake-github </div>  </div>
+<div class="title">Program Explained </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Demonstrates Doxygen html generation and publishing on GitHub Pages. The Doxygen files for this project can be seen <a href="https://semcneil.github.io/doxygen-cmake-github/">here</a>.</p>
+<div class="textblock"><p>The goal of this program was to use a TRIE data structure to create a simple phonebook that could search for contacts by phone number, first name, and last name. This program represents the beginning of that project implementing the TRIE data structure with the ability to search through first names by Full names or prefixes.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+How to use</h1>
+<p>To add names into the list we are calling from add them in here string contactList[] = {"Seth", "Scott","Sarah","Sammy","Benson","Brandon","Micah","Michael"};</p>
+<p>This is how you will call the functions for them to work in the code: </p><pre class="fragment">int main()
+{
+    int n = sizeof(contactList)/sizeof(string);
+    insertInDirectory(contactList, n);
+    string Search;
+    cout &lt;&lt; "Search: ";
+    cin &gt;&gt; Search;
+    cout &lt;&lt; "Results: " &lt;&lt; Search &lt;&lt; endl;
+    showContacts(Search);
+    return 0;
+}
+</pre><p>After inserting your contact list you can go about Searching it however you want and the way you will do that is by calling Search in the main function.</p>
+<p>The way I called it was by asking for a query in a cout instead of having a set string Search =.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Data Structure and Search</h1>
+<p>This program was created using a TRIE data structure due to the fact that there are few data structures that you can add full names and search the letter by letter but also have a value for those full names which can be used as a pointer to another list enabling us to call last names and phone numbers in the future. The TRIE data structure also has a built in search algorithm that you can use to search letter by letter and show the results, prefixes, or full names.</p>
+<p>There were failed attempts at using the TRIE data structure with hash tables but in the end the TRIE is more efficient and easier to use.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+doxygen-cmake-github</h1>
+<p>Demonstrates Doxygen html generation and publishing on GitHub Pages. The Doxygen files for this project can be seen <a href="https://semcneil.github.io/doxygen-cmake-github/">here</a>.</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
 How to use</h1>
 <ol type="1">
 <li>Point your browser to this repository (<a href="https://github.com/semcneil/doxygen-cmake-github">https://github.com/semcneil/doxygen-cmake-github</a>)</li>
@@ -76,7 +99,7 @@ How to use</h1>
 <li>Write a short (one sentence) description of what your project will do</li>
 <li>Click the Create repository from template button</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 VS Code VM Instructions</h2>
 <ol type="1">
 <li>VS Code needs the following extension added:<ol type="a">
@@ -131,7 +154,7 @@ VS Code VM Instructions</h2>
 <li>Commit (<code>git commit -a -m "Describe your changes here"</code>)</li>
 <li>Push your changes to GitHub as before (<code>git push origin main</code>)</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 General Usage</h2>
 <p>During normal development, you will change <a class="el" href="main_8cpp.html" title="This is a test of CMake, doxygen, and GitHub.">main.cpp</a>, maybe add more files in the src directory, make them, and run them. To update the documentation on the web do the following at a terminal prompt in your project's <code>build</code> directory:</p><ol type="1">
 <li><code>make</code></li>
@@ -143,8 +166,9 @@ General Usage</h2>
 <li>VS Code also has git built into it, but the use of branches isn't as easy a workflow as the commandline offers for me (personal opinion).</li>
 </ol>
 </li>
+<li>Note that in order for numbered (ordered) lists to work across markdown and Doxygen HTML and PDF outputs they are explicitly numbered vs markdown all being 1. or Doxygen's -#.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 References</h1>
 <ol type="1">
 <li><a href="https://www.doxygen.nl/manual/docblocks.html">https://www.doxygen.nl/manual/docblocks.html</a></li>

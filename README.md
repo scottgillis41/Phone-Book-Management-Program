@@ -1,3 +1,36 @@
+# Program Explained
+The goal of this program was to use a TRIE data structure to create a simple phonebook that could search for contacts by phone number, first name, and last name. This program represents the beginning of that project implementing the TRIE data structure with the ability to search through first names by Full names or prefixes.
+
+# How to use
+To add names into the list we are calling from add them in here
+    string contactList[] = {"Seth", "Scott","Sarah","Sammy","Benson","Brandon","Micah","Michael"};
+
+This is how you will call the functions for them to work in the code:
+
+    int main()
+    {
+        int n = sizeof(contactList)/sizeof(string);
+        insertInDirectory(contactList, n);
+        string Search;
+        cout << "Search: ";
+        cin >> Search;
+        cout << "Results: " << Search << endl;
+        showContacts(Search);
+        return 0;
+    }
+
+After inserting your contact list you can go about Searching it however you want and the way you will do that is by calling Search in the main function.
+
+The way I called it was by asking for a query in a cout instead of having a set string Search =.
+
+# Data Structure and Search
+This program was created using a TRIE data structure due to the fact that there are few data structures that you can add full names and search the letter by letter but also have a value for those full names which can be used as a pointer to another list enabling us to call last names and phone numbers in the future. The TRIE data structure also has a built in search algorithm that you can use to search letter by letter and show the results, prefixes, or full names.
+
+There were failed attempts at using the TRIE data structure with hash tables but in the end the TRIE is more efficient and easier to use.
+
+
+
+
 # doxygen-cmake-github
 Demonstrates Doxygen html generation and publishing on GitHub Pages. The Doxygen files for this project can be seen [here](https://semcneil.github.io/doxygen-cmake-github/).
 
